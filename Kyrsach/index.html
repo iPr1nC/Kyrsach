@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+        <title>CS2:Skill Hub</title>
+    </head>
+
+    <body>
+    <header>
+        <div class="container__header">
+            <h1 class="site-title">
+                <a href="./index.html" class="defolt-link">
+                    CS2 SkillHub 
+                </a>
+            </h1>
+            <div class="search-bar">
+                <div class="search-icon">
+                </div>
+                    <div class="search-input">
+                        <input id="input-skript" type="text" placeholder="Поиск игрока...">
+                    </div>
+                <span class="clear" ></span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#"id="view-stats">Игроки по миру</a></li>
+                    <li><a href="#" id="start-training">Тренировка</a></li>
+                    <li><a href="#" id="auth-link">Авторизация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_info">
+        <section class="hero">
+            <div class="container">
+                <h2>Анализируйте свою игру в CS2</h2>
+                <p>Отслеживайте статистику, получайте персональные рекомендации и повышайте свой скилл!</p>
+                <div class="hero-buttons">
+                        <button >
+                            <a href="./Login and Password/LogPass.html">
+                            Просмотреть статистику
+                            </a>
+                        </button>
+                        <button>
+                            <a href="./Login and Password/LogPass.html">
+                            Начать тренировку
+                            </a>
+                        </button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container__info">
+                <h2>Здесь ты увидишь:</h2>
+                <div class="feature-grid">
+
+                    <div class="feature" id="feature__info1">
+
+                        <h3>Детальная статистика</h3>
+                        <p>Отслеживайте KDA, убийства, смерти, ассисты и многое другое.</p>
+                            <div class="Info-Stats" id="Info__Stats">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Карта</th>
+                                            <th>Убийства</th>
+                                            <th>Смерти</th>
+                                            <th>Ассисты</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body-Stats"></tbody>
+                                  </table>
+                                <div class="ArrowStats" id="Arrow_Stats"></div>
+                            </div>
+                                
+                            <div class="Info-KDA" id="Info__KDA">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Ник</th>
+                                            <th>Убийства</th>
+                                            <th>Смерти</th>
+                                            <th>Ассисты</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body-KDA"></tbody>
+                                </table>
+                                <div class="ArrowKDA" id="Arrow_KDA"></div>
+                            </div>
+                                                  
+                        <div class="Arrow" id="Arrow_1"></div>
+                    </div>
+
+                <div class="feature" id="feature__info2">
+                    <h3>Персонализированные советы</h3>
+                    <p>Получайте рекомендации по улучшению вашей игры, основанные на вашей статистике.</p>
+                    <div class="Info-Recommendations" id="recommendations-container">
+                        <div class="player-info">
+                            <h3 class="player-name"></h3>
+                            <img class="Img-Profil" src="./img/Cotic.jpg">  <!-- Имя игрока -->
+                        </div>
+                        <div class="player-data">
+                            <ul>
+                                <li>KDA: <span class="kda"></span> (<span class="kda-percentage"></span>%)</li>
+                                <li>Точность: <span class="accuracy"></span> (<span class="accuracy-percentage"></span>%)</li>
+                                <li>Убийства: <span class="kills"></span> (<span class="kills-percentage"></span>%)</li>
+                            </ul>
+                        </div>
+                        <div class="player-advice">
+                            <p class="Sovet"></p>
+                        </div>
+                    </div>
+
+                    <div class="Arrow" id="Arrow_2"></div>
+                </div>
+
+                    <div class="feature" id="feature__info3">
+                        <h3>Графики и диаграммы</h3>
+                        <p>Визуализируйте свою статистику с помощью интерактивных графиков.</p>
+                            <div class="Info-Charts">
+                                <canvas id="myChart" width="600px" height="300px"></canvas>
+                            </div>
+                            <div class="Arrow" id="Arrow_3"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CS2:Skill Hub. Все права защищены.</p>
+            <p>Разработано [Новиков Алексей ББ-26]</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+    <script type="text/javascript">
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line', // Тип диаграммы (bar, line, pie, и т.д.)
+            data: {
+                labels: ['Апрель', 'Май', 'Июнь', 'Июль'],
+                datasets: [{
+                    label: 'KDA',
+                    data: [24, 38, 10, 52],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

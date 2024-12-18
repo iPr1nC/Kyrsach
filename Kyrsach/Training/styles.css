@@ -1,0 +1,222 @@
+/* Общие стили */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif; /* Или другой подходящий шрифт */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Заголовок */
+header {
+    background: url(../img/head.jpg);
+    background-size: cover;
+    background-position: 0px -50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+.container__header{
+    border: 2px solid rgb(100, 100, 100 , 0.2);
+    backdrop-filter: blur(70px);
+    box-shadow: 0px 0px 20px #312004;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.container__header .site-title {
+    display: flex;
+    padding: 10px;
+    background: transparent;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.site-title .defolt-link{
+    transition: color 0.2s linear;
+    text-decoration: none;
+    color: #fff;
+}
+.site-title .defolt-link:hover{
+    color: #bf8727;
+}
+
+/*////////////////Работа с поиском///////////////////*/
+
+.container__header .search-bar {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px #312004;
+}
+
+.search-bar .search-icon{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.search-bar .search-icon::before{
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e69710;
+    border-radius: 50%;
+    transform: translate(-2px, -2px);
+}
+
+.search-bar .search-icon::after{
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 10px;
+    background: #e69710;
+    transform: translate(8px, 8px) rotate(-45deg);
+}
+.search-bar.active{
+    width: 350px;
+}
+
+.search-bar .search-input{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar .search-input input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.search-bar .clear{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.search-bar .clear::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #999;
+    transform: rotate(45deg);
+}
+
+.search-bar .clear::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #999;
+    transform: rotate(-45deg);
+}
+/*/////Работа с навигацией/////////////////////////////////////*/
+
+nav {
+    text-align: right; /* Выравнивание навигации справа */
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links li a{
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+
+.nav-links li a:hover{
+    color: #bf8727;
+}
+/*//////////////////////////////////////////////////////////////*/
+
+main{
+    background: url('../img/Fon_Regist.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+}
+
+#spray-patterns h2{
+    color: #fff;
+    font-size: 40px;
+    margin-left:20px;
+}
+
+#weapon-list{
+    color: #fff;
+    font-size: 40px;
+    margin-left:20px ;
+}
+
+li{
+    cursor: pointer;
+}
+
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

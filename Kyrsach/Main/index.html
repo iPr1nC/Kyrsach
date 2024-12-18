@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+        <title>CS2:Skill Hub</title>
+    </head>
+
+    <body>
+    <header>
+        <div class="container__header">
+            <h1 class="site-title">
+                <a href="./index.html" class="defolt-link">
+                    CS2 SkillHub 
+                </a>
+            </h1>
+            <div class="search-bar">
+                <div class="search-icon">
+                </div>
+                    <div class="search-input">
+                        <input id="input-skript" type="text" placeholder="Поиск игрока...">
+                    </div>
+                <span class="clear" ></span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#"id="view-stats">Игроки по миру</a></li>
+                    <li><a href="#" id="start-training">Тренировка</a></li>
+                    <li><a href="#" id="auth-link">Авторизация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_info">
+        <section class="hero">
+            <div class="container">
+                <h2>Анализируйте свою игру в CS2</h2>
+                <p>Отслеживайте статистику, получайте персональные рекомендации и повышайте свой скилл!</p>
+                <div class="hero-buttons">
+                    <button id="view-stats">Просмотреть статистику</button>
+                    <button id="start-training">Начать тренировку</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container__info">
+                <h2>Здесь ты увидишь:</h2>
+                <div class="feature-grid">
+                    <div class="feature" id="feature__info1">
+                        
+                        <h3>Детальная статистика</h3>
+                        <p>Отслеживайте KDA, убийства, смерти, ассисты и многое другое.</p>
+                        <div class="Info-Stats">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Карта</th>
+                                        <th>Убийства</th>
+                                        <th>Смерти</th>
+                                        <th>Ассисты</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="feature" id="feature__info2">
+                        <h3>Персонализированные советы</h3>
+                        <p>Получайте рекомендации по улучшению вашей игры, основанные на вашей статистике.</p>
+                        <div class="Info-Recommendations">
+                        </div>
+                    </div>
+                    <div class="feature" id="feature__info3">
+                        <h3>Графики и диаграммы</h3>
+                        <p>Визуализируйте свою статистику с помощью интерактивных графиков.</p>
+                        <div class="Info-Charts">
+                        </div>
+                    </div>
+                    <!-- Добавьте еще возможности -->
+                </div>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CS2:Skill Hub. Все права защищены.</p>
+            <p>Разработано [Новиков Алексей ББ-26]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
